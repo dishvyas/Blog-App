@@ -1,0 +1,148 @@
+<html>
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <style>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body{font-family: 'Open Sans', sans-serif;}
+.header{position:relative;overflow:hidden;max-height:350px;display:flex;align-items:center;justify-content:center}
+.text{
+    /*-webkit-column-count: 2; 
+    -moz-column-count: 2; 
+    column-count: 2; */  
+    margin-top:15px;        
+}
+.statistics > p{margin-bottom:2px;}
+.statistics > p > span.label{background-color:white;color:gray;}
+.side{background:#fafafa;padding-top:15px}
+.side > img { margin-bottom:15px;}
+.semi-title{font-weight: bold;margin-top:30px;}
+.title{    
+    position: absolute;
+    bottom: 45px;
+    padding: 7px;
+    right: 25px;
+    padding-left: 25px;
+    padding-right: 30px;
+    color: white;
+    background: rgba(0,0,0,0.5);
+}
+.sub-title{    
+    position: absolute;
+    bottom: 94px;
+    padding: 7px;
+    right: 25px;
+    padding-left: 12px;
+    padding-right: 12px;
+    color: orange;
+    background: rgba(0,0,0,0.7);
+}        
+.name-author{
+    position: absolute;
+    bottom: 35px;
+    left: 100px;
+    font-size: 11px;
+    color: white;
+    background: black;
+    padding: 2px;
+    padding-right: 10px;
+    padding-left: 22px;
+    margin-left: -21px;
+    z-index: 1;
+    font-weight: 500;            
+}
+.photo-author{
+    max-height: 70px;
+    padding: 2px;
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    background: white;
+    z-index: 3;            
+}
+.triangulo{
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 60px 0 0 1200px;
+    border-color: transparent transparent transparent #ffffff;
+}
+.row-eq-height {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+}   
+
+@media (max-width: 426px) {
+    .header{
+            margin-left: -15px;
+            margin-top: -15px;
+            margin-right: -15px;
+    }
+    .title{
+        font-size:15px;
+        bottom:-12px;
+        right:0px;
+        padding-left:10px;
+        padding-right:10px;
+    }
+    .photo-author{
+        max-height:45px;
+        left:5px;
+        bottom:40px;
+    }
+    .name-author{
+        font-size:9px;
+        margin-left:-63px;
+        bottom:44px;
+    }
+    .sub-title{
+        right:0px;
+        bottom:18px;
+        padding:5px;
+        font-size:10px;
+    }
+}
+    </style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		 <!-- HEADER -->
+        <div class="header">
+            <img style="width:100%" src="http://www.limontasport.com/wp-content/uploads/2016/03/limonta-sport-slider-1-2-1800x720.jpg" />
+            <div class="triangulo"></div>
+            <div class="profile">
+                <img class="photo-author img-circle" src="http://www.bordeaux-tourism.co.uk/var/ezwebin_site/storage/images/media/images/regards-bordelais/jean-poutge/profil-jean/12599-2-fre-FR/Profil-Jean_format_360x360.jpg" />
+                <span class="name-author">Author Name</span>
+            </div>
+            <h5 class="sub-title">Blog</h5>
+            <h2 class="title">Blog Title</h2>
+        </div>
+
+        <!-- INFO -->
+        <div class="row">
+            <div class="col-xs-12">
+                <h4 style="line-height: 25px;">Blog description</h4>
+            </div>
+        </div>
+        <div class="row row-eq-height" style="padding-right:15px">
+            <div class="col-xs-9 text">
+                <p>The computer wouldn't start. She banged on the side and tried again. Nothing. She lifted it up and dropped it to the table. Still nothing. She banged her closed fist against the top. It was at this moment she saw the irony of trying to fix the machine with violence.</p>
+                <p class="semi-title">Actual Blog Content</p>
+                <p></p>
+                <p>According to the caption on the bronze marker placed by the Multnomah Chapter of the Daughters of the American Revolution on May 12, 1939, “College Hall (is) the oldest building in continuous use for Educational purposes west of the Rocky Mountains. Here were educated men and women who have won recognition throughout the world in all the learned professions.”</p>
+                <p>It was going to rain. The weather forecast didn't say that, but the steel plate in his hip did. He had learned over the years to trust his hip over the weatherman. It was going to rain, so he better get outside and prepare.
+                    Do you think you're living an ordinary life? You are so mistaken it's difficult to even explain. The mere fact that you exist makes you extraordinary. The odds of you existing are less than winning the lottery, but here you are. Are you going to let this extraordinary opportunity pass?</p>
+                <p>Do you really listen when you are talking with someone? I have a friend who listens in an unforgiving way. She actually takes every word you say as being something important and when you have a friend that listens like that, words take on a whole new meaning.</p>
+            </div>
+            </div>
+	</div>
+</div>
+</body>
+</html>

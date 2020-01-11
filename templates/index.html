@@ -1,0 +1,157 @@
+
+<html>
+<head>
+    <title>Index Page Example</title>
+    <h1 style="text-align:center">Home Page</h1>
+    <br>
+    <h2 style="text-align:center">Top liked Posts</h2>
+    <meta charset="UTF-8">
+    <style>
+        img{
+          height:150px;
+          width:100%;
+        }
+
+        body{
+        background-color: aqua;
+        }
+        
+        div [class^="col-"]{
+          padding-left:5px;
+          padding-right:5px;
+        }
+        .card{
+          transition:0.5s;
+          cursor:pointer;
+        }
+        .card-title{  
+          font-size:15px;
+          transition:1s;
+          cursor:pointer;
+        }
+        .card-title i{  
+          font-size:15px;
+          transition:1s;
+          cursor:pointer;
+          color:#ffa710
+        }
+        .card-title i:hover{
+          transform: scale(1.25) rotate(100deg); 
+          color:#18d4ca;
+          
+        }
+        .card:hover{
+          transform: scale(1.05);
+          box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+        }
+        .card-text{
+          height:60px;
+          text-align: center;
+          font-size: 15px;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+        }
+        
+        .card::before, .card::after {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          transform: scale3d(0, 0, 1);
+          transition: transform .3s ease-out 0s;
+          background: rgba(255, 255, 255, 0.1);
+          content: '';
+          pointer-events: none;
+        }
+        .card::before {
+          transform-origin: left top;
+        }
+        .card::after {
+          transform-origin: right bottom;
+        }
+        .card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+          transform: scale3d(1, 1, 1);
+        }
+    </style>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <!-- <script>
+            $.get("front", function(data){
+            $("#nav-placeholder").replaceWith(data);
+            });
+        </script> -->
+        <div id="nav-placeholder">
+        </div>
+</head>
+<body>
+    
+    <div class="container mt-2">
+    <div class="row">
+    <div class="col-md-3 col-sm-6">
+      <div class="card card-block">
+      <!-- <h4 class="card-title text-right"><i class="material-icons">settings</i></h4> -->
+        <img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" alt="Photo of sunset">
+            <p class="card-text">This is blog post 1.</p> 
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="card card-block">
+      <!-- <h4 class="card-title text-right"><i class="material-icons">settings</i></h4> -->
+    <img src="https://static.pexels.com/photos/7357/startup-photos.jpg" alt="Photo of sunset">
+    <p class="card-text">This is blog post 2.</p> 
+
+</div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="card card-block">
+      <!-- <h4 class="card-title text-right"><i class="material-icons">settings</i></h4> -->
+    <img src="https://static.pexels.com/photos/262550/pexels-photo-262550.jpeg" alt="Photo of sunset">
+    <p class="card-text">This is blog post 3.</p>
+</div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="card card-block">
+      <!-- <h4 class="card-title text-right"><i class="material-icons">settings</i></h4> -->
+    <img src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg" alt="Photo of sunset">
+    <p class="card-text">This is blog post 4.</p>
+  </div>
+    </div>    
+    <div class="col-md-3 col-sm-6">
+        <div class="card card-block">
+        <!-- <h4 class="card-title text-right"><i class="material-icons">settings</i></h4> -->
+      <img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" alt="Photo of sunset">
+      <p class="card-text">This is blog post 5.</p> 
+    </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card card-block">
+        <!-- <h4 class="card-title text-right"><i class="material-icons">settings</i></h4> -->
+      <img src="https://static.pexels.com/photos/7357/startup-photos.jpg" alt="Photo of sunset">
+      <p class="card-text">This is blog post 6.</p> 
+    </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card card-block">
+        <!-- <h4 class="card-title text-right"><i class="material-icons">settings</i></h4> -->
+      <img src="https://static.pexels.com/photos/262550/pexels-photo-262550.jpeg" alt="Photo of sunset">
+      <p class="card-text">This is blog post 7.</p> 
+    </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card card-block">
+        <!-- <h4 class="card-title text-right"><i class="material-icons">settings</i></h4> -->
+      <img src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg" alt="Photo of sunset">
+      <p class="card-text">This is blog post 8.</p> 
+    </div>
+      </div>
+  </div>
+</div>
+</body>
+</html>

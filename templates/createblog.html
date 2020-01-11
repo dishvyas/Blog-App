@@ -1,0 +1,28 @@
+<script src="//cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script>
+<div class="card-body">
+                    <h2 class="title">Create New Blog</h2>
+                    <form method="POST">
+                        <div class="input-group">
+                            <h4>Title:</h4>
+                            <input class="input--style-3" type="text" placeholder="Title" name="title">
+                        </div>
+                        <div class="input-group">
+                            <h4>Image_URL</h4>
+                            <input class="input--style-3" type="email" placeholder="Image URL" name="imagepath">
+                        </div>
+                        <div class="input-group2">
+                            <h4>Description:</h4>
+                            <textarea class="ckeditor" cols="80" id="editor1" name="editor1" rows="10"></textarea>
+                        </div>
+                        <script src="./ckeditor/ckeditor.js"></script>
+                        <textarea id='short_desc' name='short_desc' style='border: 1px solid black;' >       </textarea><br>
+                    
+                        <div class="p-t-10">
+                            <button class="btn btn--pill btn--green" type="submit">Create</button>
+                        </div>
+                    </form>
+</div>
+<script>
+    // Initialize CKEditor
+    CKEDITOR.inline( 'short_desc' );
+</script>

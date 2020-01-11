@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "89e400f7-86f9-4d4f-8610-9aa8e3e2c715",
+		"name": "CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fname\" : \"Dishant\",\n\t\"lname\" : \"Vy\",\n\t\"email\" : \"disnt@abc.com\",\n\t\"gender\" : \"Male\",\n\t\"age\" : \"20\",\n\t\"password\" : \"123456h\"\n}\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				},
+				"description": "Create User "
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/5e18192900d5cf671cc19ecf",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fname\" : \"Dishant\",\n\t\"lname\" : \"Vyas\",\n\t\"email\" : \"disnt@xyz.com\",\n\t\"gender\" : \"Male\",\n\t\"age\" : \"21\",\n\t\"password\" : \"123456h\"\n}\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/5e18192900d5cf671cc19ecf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"5e18192900d5cf671cc19ecf"
+					]
+				},
+				"description": "Update User\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/5e18192900d5cf671cc19ecf/profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fname\" : \"Dishant Vyas\",\n\t\"email\" : \"disnt@xyz.com\",\n\t\"gender\" : \"Male\",\n\t\"age\" : \"21\",\n\t\"totalposts\" : \"0\",\n\t\"totalcomments\" : \"0\"\n}\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/5e18192900d5cf671cc19ecf/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"5e18192900d5cf671cc19ecf",
+						"profile"
+					]
+				},
+				"description": "Profile API"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/blogs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\" : \"New Blog2\",\n\t\"description\" : \"Just Testing2\",\n\t\"likes\" : \"0\",\n\t\"image_url\" : \"test/test\",\n\t\"author\" : \"Dishant\"\n}\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/blogs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"blogs"
+					]
+				},
+				"description": "Create Blog Post"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/blogs/5e19bc25f16e8e50fb280904",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/blogs/5e19bc25f16e8e50fb280904",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"blogs",
+						"5e19bc25f16e8e50fb280904"
+					]
+				},
+				"description": "Show Blog post by id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/blogs/5e19bc25f16e8e50fb280904",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/blogs/5e19bc25f16e8e50fb280904",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"blogs",
+						"5e19bc25f16e8e50fb280904"
+					]
+				},
+				"description": "Delete Blog"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/blogs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/blogs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"blogs"
+					]
+				},
+				"description": "API to show all blog posts"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/blogs/5e182c5192deae7128bac712/comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"commentedby\": \"Dishant\",\n\t\"blogId\" : \"ABCAXFG\",\n\t\"comments\" : \"Just testing\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/blogs/5e182c5192deae7128bac712/comment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"blogs",
+						"5e182c5192deae7128bac712",
+						"comment"
+					]
+				},
+				"description": "Creating a Comment API"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
