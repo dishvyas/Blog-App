@@ -41,58 +41,58 @@ const user = require('./controllers/user-controller')
 
 app.use(express.static(__dirname + '/static'));
 
-app.get('/', (req, res) => {
+app.get('/', (req, res) => {                        //home page
   res.send('Welcome to Blog Services!')
 })
-app.post('/blogs', blog.create)
+app.post('/blogs', blog.create)                     //Create blog api
 
-app.get('/blogs', blog.findAll)
+app.get('/blogs', blog.findAll)                     //show all blog posts api
 
-app.get('/blogs/:blogId', blog.findOne)  
+app.get('/blogs/:blogId', blog.findOne)             //find a blog by id
 
-app.put('/blogs/:blogId', blog.update)
+app.put('/blogs/:blogId', blog.update)              //Update a blog
 
-app.delete('/blogs/:blogId', blog.delete)
+app.delete('/blogs/:blogId', blog.delete)           //Delete a blog 
 
-app.post('/user', user.create)
+app.post('/user', user.create)                      //Create a user api
 
-app.get('/users', user.findAll)
+app.get('/users', user.findAll)                     //show all users
 
-app.get('/users/:userId', user.findOne)  
+app.get('/users/:userId', user.findOne)             //find user by id
 
-app.put('/users/:userId', user.update)
+app.put('/users/:userId', user.update)              //update a user
 
-app.post('/blogs/:blogId/comment', comment.create)
+app.post('/blogs/:blogId/comment', comment.create)  //Create a comment api
 
-app.post('/blogs/:blogId/like', blog.like)
+app.post('/blogs/:blogId/like', blog.like)          //like a blog api
 
-app.post('/users/:userId/profile', user.pcreate)
+app.post('/users/:userId/profile', user.pcreate)    //create User Profile
 
-app.get('/register',function(req,res) {
+app.get('/register',function(req,res) {             //Register Frontend Page
   res.sendFile('./templates/register.html', { root: __dirname });
 });
 
-app.get('/login',function(req,res) {
+app.get('/login',function(req,res) {                //Login Frontend Page
   res.sendFile('./templates/login.html', { root: __dirname });
 });
 
-app.get('/front', function(req,res){
-  res.sendFile('./templates/navbar.html', { root: __dirname });
+app.get('/front', function(req,res){                //Navbar Page
+  res.sendFile('./templates/navbar.html', { root: __dirname }); 
 });
 
-app.get('/index', function(req,res){
+app.get('/index', function(req,res){                //index page containing top liked post frontend
   res.sendFile('./templates/index.html', { root: __dirname });
 });
 
-app.get('/blog', function(req,res){
+app.get('/blog', function(req,res){                 //Individual blog page frontend
   res.sendFile('./templates/blog.html', { root: __dirname });
 });
 
-app.get('/createblog', function(req,res){
+app.get('/createblog', function(req,res){           //Create blog page frontend
   res.sendFile('./templates/createblog.html', { root: __dirname });
 });
 
-app.get('/usercard', function(req,res){
+app.get('/usercard', function(req,res){             //User profile card layout
   res.sendFile('./templates/profilecard.html', { root: __dirname });
 });
 
